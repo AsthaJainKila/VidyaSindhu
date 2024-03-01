@@ -1,33 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 import Footer from './Footer';
 import Cards from './Cards';
+import Blog from './Blog';
+import {Link} from 'react-router-dom'
+import './static/HomePage.css';
 
-function HomePage() {
+function HomePage(){
+//function HomePage({ selectedText, setSelectedText }) {
+  const [selectedText, setSelectedText] = useState(null);
   return (
-    <div style={{ display: 'flex' }}>
-      {/* Sidebar on the left */}
-      <SideBar />
-
-      {/* Main content area */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: '50px', marginLeft: '10px' }}>
-        {/* Navbar */}
-        <NavBar />
-
-        {/* Middle panel */}
-        <div style={{ flex: 1, padding: '30px' }}>
-          {/* Cards */}
-          <div className="cards-container">
-            <Cards className="card" />
-            <Cards className="card" />
-            <Cards className="card" />
-          </div>
+    <div className="home-page">
+      <NavBar />
+      <div className="side-cards">
+        {/* Pass selectedText and setSelectedText as props to SideBar */}
+        <SideBar handleTextSelection={setSelectedText} />
+        <div className='container'>
+          {/* Conditionally render the Blog component based on selectedText */}
+          {selectedText ? <Blog selectedText={selectedText} /> : (
+          // <Blog selectedText={selectedText} />
+            <>
+              <Cards className="card" />
+              <Cards className="card" />
+              <Cards className="card" />
+            </>
+          )}
         </div>
-
-        {/* Footer */}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

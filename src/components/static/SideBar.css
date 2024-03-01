@@ -1,16 +1,18 @@
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: rgb(240, 238, 238);
+    border: 1px solid rgb(136, 136, 136);
+    border-top: 0;
     padding: 20px;
-    margin-top: 70px;
+
   }
   
-  ul {
+  .menu {
     list-style-type: none;
     padding: 0;
   }
   
-  li {
+  .menu li {
     cursor: pointer;
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -23,6 +25,7 @@
   
   .submenu li {
     border-bottom: none;
+    list-style-type: none;
   }
   
   /* Show submenu when parent is clicked */

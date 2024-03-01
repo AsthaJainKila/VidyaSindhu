@@ -1,6 +1,6 @@
 import React from 'react';
-import AcharyaShree from '../images/AcharyaShreeSinghasan.jpg';
-import './Footer.css'; // Import CSS file for styling
+import AcharyaShree from '../images/footer.jpeg';
+import './static/Footer.css'; 
 
 function Footer() {
   return (
@@ -16,7 +16,7 @@ function Footer() {
         </div>
         <div className="footer-contact">
           <h4>Astha Jain</h4>
-          <p>astha.educationloan@gmail.com</p>
+          <p>astha.kila@gmail.com</p>
         </div>
       </div>
     </footer>
@@ -24,3 +24,4 @@ function Footer() {
 }
 
 export default Footer;
+

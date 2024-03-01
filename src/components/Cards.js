@@ -4,8 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import AcharyaMantung from '../images/Acharya_Mantung.jpg';
-import './Cards.css';
+import Bhaktamar from '../images/bhaktamar.jpeg';
+import './static/Cards.css';
 
 export default function Cards() {
   return (
@@ -14,12 +14,12 @@ export default function Cards() {
         <CardMedia
           component="img"
           height="330"
-          image={AcharyaMantung}
+          image={Bhaktamar}
           alt="MantungAcharya"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Bhaktamar Hindi
+            Bhaktamar Stotra
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Param Vandaniya Acharya Mantung ko jab 48 taalo me bediyo se bandh 
